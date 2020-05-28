@@ -1,0 +1,13 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.productRow {
+   /* border: 2px solid blue;
+   border-radius: 10px; */
+   display: flex;
+   flex-direction: row; 
+   align-items: center;
+}
+.productPic {
+    max-width: 15rem;;
+}

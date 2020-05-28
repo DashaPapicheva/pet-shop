@@ -17,6 +17,21 @@
         <header>
             <h1 v-text="siteName"></h1>
         </header>
+        <main>
+            <div class="productRow">
+                <div class="col">
+                    <figure>
+                        <img v-bind:src="product.image" alt="Cat with food" class="productPic">
+                    </figure>
+                </div>
+                <div class="col">
+                    <h1 v-text="product.title"></h1>
+                    <p v-text="product.weight"></p>
+                    <p v-html="product.description"></p>
+                    <p v-text="product.price"></p>
+                </div>
+            </div>
+        </main>
     </div>
 
     <script>
@@ -24,6 +39,14 @@
            el: "#app", 
            data: {
             siteName: "Pet shop by Vue.js",
+            product: {
+                id: 101,
+                title: "Cat food",
+                weight: 3000,
+                description: "Organic dry food for your <u>favourite</u> cat.",
+                price: 100000,
+                image: "https://twocrazycatladies.com/wp-content/uploads/2019/01/Grain-Free-Kibble.jpg",
+            },
            },
         });
     </script>
